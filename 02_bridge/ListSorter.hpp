@@ -3,13 +3,13 @@
 #include <iostream>
 #include "ISorter.hpp"
 
-class ListSort : public ISorter {
+class ListSorter : public ISorter {
   public:
-    explicit ListSort(std::shared_ptr<ISortAlgorithm> algorithm)
+    explicit ListSorter(std::shared_ptr<ISortAlgorithm> algorithm)
         : ISorter(std::move(algorithm)) {}
 
     void process(/* unsorted container */) const override {
-      std::cout << "ListSort abstraction using algorithm..." << std::endl;
+      std::cout << "ListSorter abstraction using algorithm..." << std::endl;
       algorithm_->sort(/* unsorted container */);
     }
 };

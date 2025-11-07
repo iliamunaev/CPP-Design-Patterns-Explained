@@ -8,6 +8,10 @@ A collection of C++ design pattern implementations with practical examples.
 
 Demonstrates the Adapter pattern using a frequency range example. Shows how to adapt incompatible legacy interfaces to work together through a common interface (`IFrequencyRange`).
 
+### 02. Bridge Pattern (for sorting abstraction)
+Implements the Bridge pattern to decouple abstraction (`ISorter`, `VectorSorterer`, `ListSorter`) from its implementation (`ISortAlgorithm`, `MergeSortAlgorithm`, `InsertSortAlgorithm`).
+This design allows independent variation of sorting algorithms and container-specific abstractions without modifying existing code.
+
 ## Building
 
 Each pattern is self-contained in its own directory. To compile:

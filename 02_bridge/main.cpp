@@ -2,26 +2,26 @@
 
 #include "MergeSortAlgorithm.hpp"
 #include "InsertSortAlgorithm.hpp"
-#include "VectorSort.hpp"
-#include "ListSort.hpp"
+#include "VectorSorter.hpp"
+#include "ListSorter.hpp"
 
 int main() {
   auto mergeAlgo = std::make_shared<MergeSortAlgorithm>();
   auto insertAlgo = std::make_shared<InsertSortAlgorithm>();
 
   {
-    VectorSort vectorSorter(mergeAlgo);
-    ListSort listSorter(insertAlgo);
+    VectorSorter VectorSorterer(mergeAlgo);
+    ListSorter listSorter(insertAlgo);
 
-    vectorSorter.process();
+    VectorSorterer.process();
     listSorter.process();
   }
   std::cout << std::endl;
   {
-    VectorSort vectorSorter(insertAlgo);
-    ListSort listSorter(mergeAlgo);
+    VectorSorter VectorSorterer(insertAlgo);
+    ListSorter listSorter(mergeAlgo);
 
-    vectorSorter.process();
+    VectorSorterer.process();
     listSorter.process();
   }
 
